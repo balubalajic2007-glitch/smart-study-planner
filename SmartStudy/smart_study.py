@@ -4,10 +4,6 @@ from datetime import datetime, date, timedelta
 DB_NAME = "smart_study.db"
 
 
-# =========================================================
-# DATABASE
-# =========================================================
-
 def connect_db():
     return sqlite3.connect(DB_NAME)
 
@@ -40,9 +36,6 @@ def create_tables():
     conn.close()
 
 
-# =========================================================
-# DIFFICULTY
-# =========================================================
 
 def difficulty_name(value):
     if value == 1:
@@ -68,9 +61,8 @@ def get_difficulty():
         print("Invalid choice.")
 
 
-# =========================================================
+
 # ADD SUBJECT
-# =========================================================
 
 def add_subject():
     print("\n========== ADD SUBJECT ==========")
@@ -142,9 +134,9 @@ def add_subject():
     conn.close()
 
 
-# =========================================================
+
 # REMOVE SUBJECT
-# =========================================================
+
 
 def remove_subject():
     print("\n========== REMOVE SUBJECT ==========")
@@ -190,9 +182,8 @@ def remove_subject():
     print(f"✅ {subject[0]} removed.")
 
 
-# =========================================================
+
 # SHOW SUBJECTS
-# =========================================================
 
 def show_subjects():
     conn = connect_db()
@@ -234,9 +225,8 @@ def show_subjects():
         )
 
 
-# =========================================================
+
 # ADD TOPIC
-# =========================================================
 
 def add_topic():
     print("\n========== ADD TOPIC ==========")
